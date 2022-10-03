@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+
+int main(){
+int opcao,num1,num2;
+
+do{
+
+    printf("\n1 - somar \n2 - subtrair \n3 - multiplicar \n4 - divisão \n0 - sair");
+    scanf("%d",&opcao);
+
+    if(opcao > 0 && opcao < 5){
+        printf("digite dois valores: ");
+    scanf("%d %d",&num1,&num2);
+}
+//switch(opção)-> em que o que há dentro dos parentes é minha variável no caso minha variável é opção.
+    switch(opcao){
+
+    case 0:
+        printf("saindo....\n");
+        break; // para o código executar as funções de forma uniforme e não todas de uma vez só.
+
+    case 1:
+        printf("soma:%d \n",num1 + num2);
+        break;
+
+    case 2:
+      printf("subtração: %d \n",num1 - num2);
+        break;
+
+    case 3:
+        printf("multiplicação: %d \n",num1 * num2);
+        break;
+
+    case 4:
+     while (num2==0){
+        printf("digite outro valor:");
+        scanf("%d",&num2);
+}
+        printf("divisão: %d \n",num1);
+        break;
+
+    default:
+        printf("opcao invalida :\n digite outro valor");
+     }
+     }while(opcao != 0);
+     return 0;
+}
