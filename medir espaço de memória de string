@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+void main(){
+    printf("digite seu nome: ");
+    
+    int i;
+    char letras[55];
+
+    
+    short int idade;
+    scanf("%hd",&idade);
+
+    fgets(letras,15,stdin);
+    
+    i = 0;
+    
+    while(letras [i] != '\0'){
+        printf("%d = %d\n",i,letras[i]);
+        i++;
+    
+    }
+    printf("\nagora digite sua idade: ");
+    scanf("%hd",&idade);
+    printf(" o tamanho em que ocupa na memória é: %ld e o número referente sua idade é: %d",sizeof(idade),idade);
+}
